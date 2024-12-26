@@ -1,0 +1,90 @@
+/* Reset y estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Texto centrado */
+}
+
+/* Contenedor principal */
+.gameover-container {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #3919CB; /* Borde morado oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    max-width: 400px; /* Ancho máximo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Título principal */
+.gameover-container h1 {
+    font-size: 32px; /* Tamaño de fuente grande */
+    color: #3919CB; /* Texto morado oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Puntaje final */
+#finalScore {
+    font-size: 20px; /* Tamaño de fuente mediano */
+    color: #333; /* Texto gris oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del puntaje */
+}
+
+/* Título del ranking */
+.gameover-container h2 {
+    font-size: 24px; /* Tamaño de fuente grande */
+    color: #555; /* Texto gris */
+    margin-bottom: 15px; /* Espaciado debajo del título */
+}
+
+/* Lista del ranking */
+#topPlayers {
+    list-style: none; /* Elimina las viñetas predeterminadas */
+    padding: 0; /* Sin relleno interno */
+    margin-bottom: 20px; /* Espaciado debajo de la lista */
+}
+
+#topPlayers li {
+    font-size: 16px; /* Tamaño de fuente mediano */
+    color: #333; /* Texto gris oscuro */
+    padding: 5px 0; /* Espaciado entre los elementos */
+}
+
+/* Botones */
+button {
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente mediano */
+    border: none; /* Sin bordes */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo botón */
+    transition: background-color 0.3s; /* Transición suave para hover */
+    margin: 10px; /* Espaciado entre botones */
+}
+
+.btn-primary {
+    background-color: #3919CB; /* Fondo morado oscuro */
+    color: white; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #2a148c; /* Fondo más oscuro en hover */
+}
+
+.btn-secondary {
+    background-color: #555; /* Fondo gris */
+    color: white; /* Texto blanco */
+}
+
+.btn-secondary:hover {
+    background-color: #333; /* Fondo más oscuro en hover */
+}

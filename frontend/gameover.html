@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over - Game Fire</title>
+    <link rel="stylesheet" href="styles/gameover.css">
+</head>
+<body>
+    <div class="gameover-container">
+        <h1> Game Over </h1>
+        <p id="finalScore">Tu Puntaje: 0</p>
+        <h2>🏆 Top 5 Jugadores 🏆</h2>
+        <ul id="topPlayers"></ul>
+        <button id="playAgain" class="btn-primary">Jugar de Nuevo</button>
+        <button id="goHome" class="btn-secondary">Ir al Inicio</button>
+    </div>
+    <script>
+        // Recuperar el puntaje del jugador actual desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const finalScore = urlParams.get('score') || 0;
+
+        // Mostrar el puntaje final
+        document.getElementById('finalScore').textContent = `Tu Puntaje: ${finalScore}`;
+
+        // Recuperar y mostrar el top 5 de jugadores desde localStorage
+        const topPlayers = JSON.parse(localStorage.getItem('topPlayers')) || [];
+        const updatedPlayers = [...topPlayers, { score: parseInt(finalScore) || 0 }];
+        updatedPlayers.sort((a, b) => b.score - a.score); // Ordenar por puntaje descendente
+        const top5 = updatedPlayers.slice(0, 5);
+
+        // Guardar el nuevo top 5 en localStorage
+        localStorage.setItem('topPlayers', JSON.stringify(top5));
+
+        // Mostrar el ranking
+        const topPlayersList = document.getElementById('topPlayers');
+        top5.forEach((player, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `#${index + 1} - ${player.score} puntos`;
+            topPlayersList.appendChild(listItem);
+        });
+
+        // Botón para jugar de nuevo
+        document.getElementById('playAgain').addEventListener('click', () => {
+            window.location.href = "game.html"; // Redirige al juego
+        });
+
+        // Botón para volver al inicio
+        document.getElementById('goHome').addEventListener('click', () => {
+            window.location.href = "index.html"; // Redirige al inicio
+        });
+    </script>
+</body>
+</html>

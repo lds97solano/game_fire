@@ -1,0 +1,73 @@
+/* Reset y estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center;
+    background-color: #3919CB; /* Fondo morado oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px 0; /* Espaciado interno */
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Contenedor principal */
+main {
+    flex-grow: 1; /* Permite que el contenido principal crezca para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del canvas del juego */
+#gameCanvas {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #3919CB; /* Borde morado */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 90%; /* Ocupa el 90% del ancho del contenedor */
+    max-width: 900px; /* Ancho máximo */
+    height: 600px; /* Altura fija */
+    margin-bottom: 20px; /* Espaciado debajo del canvas */
+}
+
+/* Botón de inicio del juego */
+#startButton {
+    padding: 15px 30px; /* Espaciado interno */
+    background-color: #3919CB; /* Fondo morado oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 25px; /* Bordes completamente redondeados */
+    font-size: 18px; /* Tamaño de fuente mediano */
+    cursor: pointer; /* Cursor tipo botón */
+    transition: background-color 0.3s; /* Transición suave en hover */
+}
+
+#startButton:hover {
+    background-color: #2a148c; /* Fondo más oscuro en hover */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    background-color: #222; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente pequeño */
+    margin-top: auto; /* Empuja el pie de página hacia el final */
+}

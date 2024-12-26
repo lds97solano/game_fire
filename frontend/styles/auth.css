@@ -1,0 +1,116 @@
+/* Contenedor principal del formulario */
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Botones de redes sociales */
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-btn:hover {
+    background-color: #f5f5f5;
+}
+
+/* Separador entre secciones */
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.separator span {
+    font-size: 14px;
+    color: #888;
+    margin: 0 10px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo del formulario */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Botón de envío */
+.login-btn {
+    width: 100%;
+    background-color: #3919CB;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #2a148c;
+}
+
+/* Enlace para alternar entre formularios */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Clase para ocultar el formulario */
+.hidden {
+    display: none;
+}
