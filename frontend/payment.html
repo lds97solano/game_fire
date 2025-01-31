@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paga y Participa</title>
+    <link rel="stylesheet" href="styles/payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="payment-container">
+        <!-- Encabezado -->
+        <header class="header">
+            <h1>¡Participa Ahora!</h1>
+            <p>Compite por premios increíbles. ¡El tiempo corre, no te quedes atrás!</p>
+        </header>
+
+        <!-- Cronómetro -->
+        <section id="countdown-timer" class="countdown-timer">
+            <div class="time-unit">
+                <div class="circle">
+                    <span id="days">2</span>
+                </div>
+                <p>DÍAS</p>
+            </div>
+            <div class="time-unit">
+                <div class="circle">
+                    <span id="hours">06</span>
+                </div>
+                <p>HORAS</p>
+            </div>
+            <div class="time-unit">
+                <div class="circle">
+                    <span id="minutes">15</span>
+                </div>
+                <p>MINUTOS</p>
+            </div>
+            <div class="time-unit">
+                <div class="circle">
+                    <span id="seconds">48</span>
+                </div>
+                <p>SEGUNDOS</p>
+            </div>
+        </section>
+
+        <!-- Imagen del premio -->
+        <section class="prize-section">
+            <img src="assets/premio.png" alt="Imagen del premio del concurso" class="prize-image">
+        </section>
+
+        <!-- Botón de pago -->
+        <footer class="footer">
+            <button id="pay-button" class="pay-button" aria-label="Jugar ahora">Jugar ahora</button>
+        </footer>
+    </div>
+
+    <!-- Script del Widget de Wompi -->
+    <script src="https://checkout.wompi.co/widget.js"></script>
+    <script type="module" src="scripts/payment.js"></script>
+</body>
+</html>

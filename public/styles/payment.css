@@ -1,0 +1,159 @@
+/* Reset y estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.payment-container {
+    background: transparent; /* Fondo transparente */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Encabezado */
+.header h1 {
+    font-size: 34px;
+    color: #1e293b;
+}
+
+.header p {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Cronómetro */
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.time-unit {
+    text-align: center;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background: #1e40af;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-unit p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #475569;
+}
+
+/* Imagen del premio */
+.prize-section {
+    margin: 20px 0;
+}
+
+.prize-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botón de pago */
+.pay-button {
+    background: #1e40af;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pay-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsividad para tabletas */
+@media (max-width: 768px) {
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .pay-button {
+        font-size: 14px;
+    }
+
+    .countdown-timer {
+        gap: 8px;
+        padding: 15px 0;
+    }
+}
+
+/* Responsividad para móviles pequeños */
+@media (max-width: 480px) {
+    .circle {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .time-unit p {
+        font-size: 10px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .prize-section {
+        margin: 15px 0;
+    }
+
+    .pay-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .countdown-timer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}

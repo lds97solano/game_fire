@@ -1,0 +1,148 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.about-testimonials {
+    display: flex; /* Diseño en dos columnas */
+    justify-content: space-between; /* Espaciado entre las columnas */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+    gap: 30px; /* Espacio entre columnas */
+    padding: 50px; /* Espaciado interno */
+    background: #9b9bce; /* Fondo principal */
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 120px; /* Curvatura decorativa */
+    min-height: auto; /* Ajusta la altura al contenido */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño */
+}
+
+/* Fondo decorativo */
+.about-testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa; /* Fondo blanco */
+    clip-path: ellipse(80% 70% at 80% 30%);
+    z-index: 1; /* Detrás del contenido */
+}
+
+/* Contenedor izquierdo: "Sobre Nosotros" y "Contáctenos" */
+.about-container {
+    flex: 2; /* Más ancho que el lado derecho */
+    display: flex;
+    flex-direction: column; /* Apila las secciones verticalmente */
+    gap: 20px; /* Espaciado entre "Nosotros" y "Contáctenos" */
+    z-index: 2; /* Asegura que el contenido esté sobre el fondo decorativo */
+}
+
+/* Contenedor derecho: "Reseñas" */
+.testimonials {
+    flex: 1; /* Menor ancho que el lado izquierdo */
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    z-index: 2; /* Asegura que las reseñas estén sobre el fondo */
+}
+
+/* Títulos */
+.about h1,
+.contact h1,
+.testimonials h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Texto */
+.about p,
+.contact p,
+.testimonial p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: left;
+}
+
+/* Links */
+.contact a {
+    color: #9b9bce;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Diseño de testimonios */
+.testimonial {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+    .about-testimonials {
+        flex-direction: column; /* Apila las columnas */
+        gap: 30px; /* Espaciado entre bloques */
+        padding: 20px; /* Reduce el padding general */
+    }
+
+    .about-container,
+    .testimonials {
+        flex: unset; /* Elimina el tamaño flexible */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .about h1,
+    .contact h1,
+    .testimonials h2 {
+        font-size: 28px; /* Reduce el tamaño del texto */
+        text-align: center; /* Centra los títulos */
+    }
+
+    .about p,
+    .contact p,
+    .testimonial p {
+        font-size: 14px; /* Reduce el tamaño del texto */
+        text-align: center; /* Centra el texto */
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .about-testimonials {
+        padding: 10px; /* Reduce el padding */
+        gap: 20px; /* Reduce el espaciado */
+    }
+
+    .about h1,
+    .contact h1,
+    .testimonials h2 {
+        font-size: 20px; /* Tamaño reducido de títulos */
+    }
+
+    .about p,
+    .contact p,
+    .testimonial p {
+        font-size: 12px; /* Texto más pequeño */
+    }
+
+    .testimonial {
+        padding: 10px; /* Reduce el espaciado interno */
+    }
+}
